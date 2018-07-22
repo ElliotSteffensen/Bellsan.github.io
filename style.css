@@ -1,0 +1,67 @@
+.button:hover,
+.button:focus {
+  box-shadow: inset 8.1em 0 0 0 var(--hover);
+}
+
+.button {
+  --color: #ffffff;
+  --hover: #ffffff;
+}
+
+#topbtn {
+    color: var(--color);
+    transition: 0.50s;
+    text-decoration: none;
+}
+#topbtn:hover, #topbtn:focus {
+  border-color: var(--hover);
+  color: #17181c;
+}
+
+#wrapper {
+    color: #ffffff;
+    background: url(simplistic-wallpapers-reddit.jpg) no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 10vh;
+    display: flex;
+    height: 105vh;
+}
+
+.fa fa-chevron-down{
+    color: black;
+    font-size: 40px;
+}
+
+#topbtn {
+    background: none;
+    border: 2px solid;
+    font-family: 'Raleways', sans-serif;
+    font-size: 1vw;
+    line-height: 1;
+    margin: -0.15em;
+    padding: 1em 2em;
+    letter-spacing: 1px;
+    margin-top: -2vw
+}
+
+h1 {
+    letter-spacing: 2px;
+    font: bold 2.5vw 'Raleways', sans-serif;
+}
+h2{
+    letter-spacing: 1px;
+    font: 2.1vw 'Raleways', sans-serif;
+    margin-top: -2vw;
+}
+#page1{
+    margin: 0;
+    padding: 0;
+    height: 105vh;
+}
