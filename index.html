@@ -1,34 +1,91 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html lang="en-US">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <title>Home</title>
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-    <div id="wrapper">
-        <div class="buttons">
-            <h1>Bellsan</h1>
-            <h2>Welcome to my world</h2>
-            <a id="topbtn" class="button" href="https://www.youtube.com/" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;">Youtube</a>
-            <a id="topbtn" class="button" href="https://steamcommunity.com/id/Bellsan/" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;">Steam</a>
-            <a id="arrow" href="https://www.youtube.com/" class="fa fa-chevron-down"></a>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Guest@bellsan.me</title>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            $("#form1").submit(function(){
+                var input = $('#input').val()
+                var reset = $("#form1")[0].reset();
+                var colorrevert = $("p.output").css("color", "white");
+
+                if (input == "clear") {
+                    $("#output").text(" ");
+                    reset
+                }
+                else if (input == "login Elliot") {
+                    $("title").text("Elliot@bellsan.me");
+                    $("p.login").text('[elliot@bellsan.me ~]# ');
+                    $("p.login").append('<input type="text" id="input" autocomplete="off">');
+                    $("#output").append("Successfully logged in as Elliot!<br>");
+                    reset
+                }
+                else if (input == "login Guest") {
+                    colorrevert
+                    $("title").text("Guest@bellsan.me");
+                    $("p.login").text('[guest@bellsan.me ~]# ');
+                    $("p.login").append('<input type="text" id="input" autocomplete="off">');
+                    $("#output").append("Successfully logged in as Guest!<br>");
+                    reset
+                }
+                else if (input == "logout") {
+                    colorrevert
+                    $("title").text("Guest@bellsan.me");
+                    $("p.login").text('[guest@bellsan.me ~]# ');
+                    $("p.login").append('<input type="text" id="input" autocomplete="off">');
+                    $("#output").append("Successfully logged out!<br>");
+                    reset
+                }
+                else if (input == "lightmode") {
+                    $("p.output").css("color", "black");
+                    $("#container").css("color", "black");
+                    $("#container").css("background-color", "white");
+                    $("#input").css("color", "black");
+                    $("#input").css("background-color", "White");
+                    $("#output").append("Successfully changed to lightmode<br>");
+                    reset
+                }
+                else if (input == "darkmode") {
+                    colorrevert
+                    $("#container").css("color", "white");
+                    $("#container").css("background-color", "black");
+                    $("#input").css("color", "white");
+                    $("#input").css("background-color", "black");
+                    $("#output").append("Successfully changed to darkmode<br>");
+                    reset
+                }
+                else if (input == "panic") {
+                    window.location.replace("http://www.google.com");
+                }
+                else {
+                    $("p.output").css("color", "red");
+                    $("#output").append("Command not found! <br>");
+                    reset
+                }
+            return false;
+            });
+        });
+    </script>
+    <div id="container">
+        <div id="output-container">
+            <p id="output" class="output"></p>
         </div>
+        <div id="input-container">
+            <form action="" id="form1">
+                <p class="login">[guest@bellsan.me ~]# <input type="text" id="input" autocomplete="off"></p>
+                
+            </form>
+        </div>
+
     </div>
-    <div id="wrapper2">
-        <div id="page1">
-            <a id="about" class"smooth"></a>
-        </div>
-        <div id="page2">
-            <a id="Portfolio" class"smooth"></a>
-        </div>
-        <div id="page3">
-            <a id="Contact" class"smooth"></a>
-        </div>
-    </div>
-    </body>
+</body>
+
 </html>
