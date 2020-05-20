@@ -98,6 +98,7 @@ div.home aside {
       align-self: center;
   padding-left: 10vh;
   padding-right: 10vh;
+  overflow: hidden;
 }
 
 div#book {
