@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Sheraton</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar-wrapper" id="myTopnav">
+            <img src="images/sherton.png" alt="logo">
+            <ul class="navbar-ul">
+                <li><a href="#home" class="navbar">Home</a></li>
+                <li><a href="#book" class="navbar">Book</a></li>
+                <li><a href="#find" class="navbar">Find</a></li>
+                <li><a href="#contact" class="navbar">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="home" id="home">
+        <div class="main-content">
+            <h1>Welcome to<br>The Sheraton</h1>
+            <p>Enjoy your stay!</p>
+        </div>
+        <aside>
+            <h1>Om oss</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tempore dicta illo error enim et explicabo ratione sequi repellat atque sed magnam voluptate eum, id accusantium alias sunt. Libero, aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tempore dicta illo error enim et explicabo ratione sequi repellat atque sed magnam voluptate eum, id accusantium alias sunt. Libero, aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tempore dicta illo error enim et explicabo ratione sequi repellat atque sed magnam voluptate eum, id accusantium alias sunt. Libero, aperiam.</p>
+        </aside>
+    </div>
+    <div id="book">
+        <div class="container">
+            <form action="action_page.php">
+              <div class="row">
+                <div class="col-25">
+                  <label for="fname">First Name</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="lname">Last Name</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="rooms">Rooms</label>
+                </div>
+                <div class="col-75">
+                  <select id="rooms" name="rooms">
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                    <option value="suite">Suite</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="extra_Instructions">Extra Instructions</label>
+                </div>
+                <div class="col-75">
+                  <textarea id="extra_Instructions" name="extra_Instructions" placeholder="Want to add something?" style="height:200px"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <input type="submit" value="Submit">
+              </div>
+            </form>
+          </div> 
+    </div>
+    <div id="find">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2035.2345951821103!2d18.059316916365706!3d59.32903708165869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d5fbd8a2865%3A0x48f87179ae6b63db!2sSheraton%20Stockholm%20Hotel!5e0!3m2!1ssv!2sse!4v1589793945658!5m2!1ssv!2sse" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="find_text">
+            <h1>Find Us!</h1>
+            <p>We have premium locations<br>all over the world</p>
+        </div>
+    </div>
+    <footer id="contact">
+        <div class="info">
+            <a href="mailto:fake@mail.com">Email us here!</a>
+            <p>phone: 070-12345678</p>
+            <a href="https://www.google.com">Google</a>
+        </div>
+    </footer>
+</body>
+</html>
