@@ -67,37 +67,32 @@ div.home {
   color: white;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  background: url(/webhotell/images/image3.jpg) no-repeat fixed center;
+  -ms-grid-columns: (minmax(500px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  background: url(/images/image3.jpg) no-repeat fixed center;
   height: 100vh;
   width: 100%;
 }
 
 div.home .main-content {
-  -ms-grid-column: 1;
-  grid-column: 1;
-  text-align: left;
   font-size: 40px;
-  -ms-grid-column-align: end;
-      justify-self: end;
+  -ms-grid-column-align: center;
+      justify-self: center;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-div.home aside {
-  position: aboslute;
+div.home .side-content {
   line-break: strict;
-  text-align: left;
   font-size: 20px;
-  -ms-grid-column-align: end;
-      justify-self: end;
+  -ms-grid-column-align: start;
+      justify-self: start;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  padding-left: 10vh;
-  padding-right: 10vh;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 div#book {
@@ -163,7 +158,7 @@ label {
   display: inline-block;
 }
 
-input[type=submit] {
+button {
   background-color: #4CAF50;
   color: white;
   padding: 12px 20px;
@@ -199,14 +194,60 @@ input[type=submit] {
 }
 
 @media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
+  .col-25, .col-75, button {
     width: 100%;
     margin-top: 0;
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .main-content h1, .main-content p {
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  div.home {
+    height: 200vh;
+  }
+  div.home .main-content {
+    padding-top: 10vh;
+  }
+  div.home .side-content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  div.home h1, div.home p {
     text-align: center;
   }
   div#book .container {
@@ -215,11 +256,21 @@ input[type=submit] {
   div#find iframe {
     width: 100%;
   }
+  div#find h1, div#find p {
+    text-align: center;
+  }
   div#contact div {
     padding-top: 0px;
   }
   nav.navbar-wrapper li {
     padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  div.home {
+    -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 }
 /*# sourceMappingURL=style.css.map */
