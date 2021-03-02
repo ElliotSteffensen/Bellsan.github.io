@@ -21,11 +21,11 @@
                     $("#output").text(" ");
                     reset
                 }
-                else if (input == "login user") {
-                    $("title").text("user@bellsan.me");
-                    $("p.login").text('[elliot@bellsan.dev ~]# ');
+                else if (input == "login root") {
+                    $("title").text("root@bellsan.dev");
+                    $("p.login").text('[root@bellsan.dev ~]# ');
                     $("p.login").append('<input type="text" id="input" autocomplete="off">');
-                    $("#output").append("Successfully logged in as Elliot!<br>");
+                    $("#output").append("Successfully logged in as root!<br>");
                     reset
                 }
                 else if (input == "login guest") {
