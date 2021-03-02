@@ -23,15 +23,15 @@
                 }
                 else if (input == "login user") {
                     $("title").text("user@bellsan.me");
-                    $("p.login").text('[elliot@bellsan.me ~]# ');
+                    $("p.login").text('[elliot@bellsan.dev ~]# ');
                     $("p.login").append('<input type="text" id="input" autocomplete="off">');
                     $("#output").append("Successfully logged in as Elliot!<br>");
                     reset
                 }
                 else if (input == "login guest") {
                     colorrevert
-                    $("title").text("guest@bellsan.me");
-                    $("p.login").text('[guest@bellsan.me ~]# ');
+                    $("title").text("guest@bellsan.dev");
+                    $("p.login").text('[guest@bellsan.dev ~]# ');
                     $("p.login").append('<input type="text" id="input" autocomplete="off">');
                     $("#output").append("Successfully logged in as Guest!<br>");
                     reset
@@ -39,7 +39,7 @@
                 else if (input == "logout") {
                     colorrevert
                     $("title").text("guest@bellsan.dev");
-                    $("p.login").text('[guest@bellsan.me ~]# ');
+                    $("p.login").text('[guest@bellsan.dev ~]# ');
                     $("p.login").append('<input type="text" id="input" autocomplete="off">');
                     $("#output").append("Successfully logged out!<br>");
                     reset
