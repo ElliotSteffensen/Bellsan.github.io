@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Guest@bellsan.me</title>
+    <title>guest@bellsan.dev</title>
 </head>
 <body>
     <script>
@@ -21,16 +21,16 @@
                     $("#output").text(" ");
                     reset
                 }
-                else if (input == "login Elliot") {
-                    $("title").text("Elliot@bellsan.me");
+                else if (input == "login user") {
+                    $("title").text("user@bellsan.me");
                     $("p.login").text('[elliot@bellsan.me ~]# ');
                     $("p.login").append('<input type="text" id="input" autocomplete="off">');
                     $("#output").append("Successfully logged in as Elliot!<br>");
                     reset
                 }
-                else if (input == "login Guest") {
+                else if (input == "login guest") {
                     colorrevert
-                    $("title").text("Guest@bellsan.me");
+                    $("title").text("guest@bellsan.me");
                     $("p.login").text('[guest@bellsan.me ~]# ');
                     $("p.login").append('<input type="text" id="input" autocomplete="off">');
                     $("#output").append("Successfully logged in as Guest!<br>");
@@ -38,7 +38,7 @@
                 }
                 else if (input == "logout") {
                     colorrevert
-                    $("title").text("Guest@bellsan.me");
+                    $("title").text("guest@bellsan.dev");
                     $("p.login").text('[guest@bellsan.me ~]# ');
                     $("p.login").append('<input type="text" id="input" autocomplete="off">');
                     $("#output").append("Successfully logged out!<br>");
@@ -63,7 +63,7 @@
                     reset
                 }
                 else if (input == "panic") {
-                    window.location.replace("http://www.google.com");
+                    window.location.replace("https://www.google.com/search?tbm=isch&sxsrf=ALeKk004RBVa4mXxW5rLlm9vQVSCmqwmCQ%3A1614697542198&source=hp&biw=2560&bih=1326&ei=RlQ-YOvrCIX0sAff9Z2wAg&q=cats&oq=cats&gs_lcp=CgNpbWcQAzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BwgjEOoCECc6BAgjECc6BQgAELEDOggIABCxAxCDAVDHE1i-FmDIF2gBcAB4AIABQYgB8AGSAQE0mAEAoAEBqgELZ3dzLXdpei1pbWewAQo&sclient=img&ved=0ahUKEwjrpq2L8ZHvAhUFOuwKHd96ByYQ4dUDCAY&uact=5");
                 }
                 else {
                     $("p.output").css("color", "red");
