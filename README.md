@@ -1,2 +1,3 @@
-# Bellsan.github.io
-A simple terminal emulator website i am creating to learn javascript
+# steffensens.io
+Personal portfolio website.
+Still a work in progress
