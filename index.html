@@ -2,89 +2,71 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>guest@bellsan.dev</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>steffensens.io</title>
 </head>
+
 <body>
-    <script>
-        $(document).ready(function(){
-            $("#form1").submit(function(){
-                var input = $('#input').val()
-                var reset = $("#form1")[0].reset();
-                var colorrevert = $("p.output").css("color", "white");
-
-                if (input == "clear") {
-                    $("#output").text(" ");
-                    reset
-                }
-                else if (input == "login root") {
-                    $("title").text("root@bellsan.dev");
-                    $("p.login").text('[root@bellsan.dev ~]# ');
-                    $("p.login").append('<input type="text" id="input" autocomplete="off">');
-                    $("#output").append("Successfully logged in as root!<br>");
-                    reset
-                }
-                else if (input == "login guest") {
-                    colorrevert
-                    $("title").text("guest@bellsan.dev");
-                    $("p.login").text('[guest@bellsan.dev ~]# ');
-                    $("p.login").append('<input type="text" id="input" autocomplete="off">');
-                    $("#output").append("Successfully logged in as Guest!<br>");
-                    reset
-                }
-                else if (input == "logout") {
-                    colorrevert
-                    $("title").text("guest@bellsan.dev");
-                    $("p.login").text('[guest@bellsan.dev ~]# ');
-                    $("p.login").append('<input type="text" id="input" autocomplete="off">');
-                    $("#output").append("Successfully logged out!<br>");
-                    reset
-                }
-                else if (input == "lightmode") {
-                    $("p.output").css("color", "black");
-                    $("#container").css("color", "black");
-                    $("#container").css("background-color", "white");
-                    $("#input").css("color", "black");
-                    $("#input").css("background-color", "White");
-                    $("#output").append("Successfully changed to lightmode<br>");
-                    reset
-                }
-                else if (input == "darkmode") {
-                    colorrevert
-                    $("#container").css("color", "white");
-                    $("#container").css("background-color", "black");
-                    $("#input").css("color", "white");
-                    $("#input").css("background-color", "black");
-                    $("#output").append("Successfully changed to darkmode<br>");
-                    reset
-                }
-                else if (input == "panic") {
-                    window.location.replace("https://www.google.com/search?tbm=isch&sxsrf=ALeKk004RBVa4mXxW5rLlm9vQVSCmqwmCQ%3A1614697542198&source=hp&biw=2560&bih=1326&ei=RlQ-YOvrCIX0sAff9Z2wAg&q=cats&oq=cats&gs_lcp=CgNpbWcQAzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BwgjEOoCECc6BAgjECc6BQgAELEDOggIABCxAxCDAVDHE1i-FmDIF2gBcAB4AIABQYgB8AGSAQE0mAEAoAEBqgELZ3dzLXdpei1pbWewAQo&sclient=img&ved=0ahUKEwjrpq2L8ZHvAhUFOuwKHd96ByYQ4dUDCAY&uact=5");
-                }
-                else {
-                    $("p.output").css("color", "red");
-                    $("#output").append("Command not found! <br>");
-                    reset
-                }
-            return false;
-            });
-        });
-    </script>
-    <div id="container">
-        <div id="output-container">
-            <p id="output" class="output"></p>
+    <div class="container">
+        <header>
+            <h1>Elliot Steffensen</h1>
+            <h2>Aspiring software engineer</h2>
+        </header>
+        <div class="content">
+            <div class="skills">
+                <input type="checkbox" id="skills" checked="true">
+                <label for="skills">Skills</label>
+                <section class="skills-content sub-content">
+                    <ul>
+                        <li><b>Python</b> - Advanced proficiency in several areas</li>
+                        <li><b>c#</b> - Proficient and able</li>
+                        <li><b>Java</b> - Proficient and able</li>
+                        <li><b>html/css/javascript</b> - Advanced proficiency in several areas</li>
+                        <li><b>Bash</b> - Advanced proficiency</li>
+                        <li><b>Windows/Linux/MacOS</b> - Advanced proficiency</li>
+                        <li><b>Office suite</b> - Advanced proficiency notably in excel</li>
+                        <li><b>Git</b> - Advanced proficiency</li>
+                        <li><b>Docker</b> - Advanced</li>
+                        <li><b>SQL/Postgresql/MongoDB</b> - Proficient</li>
+                        <li><b>SAP -MDG/Information steward</b> - Proficient</li>
+                        <li><b>English/Swedish</b> - Advanced proficiency</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="exper">
+                <input type="checkbox" id="exper">
+                <label for="exper">Experience</label>
+                <section class="exper-content sub-content">
+                    <dl>
+                        <dt><b>Coop Sverige AB</b> / Masterdata CAT</dt>
+                        <dd>My responsibilities include filtering and analyzing data surrounding<br>articles and correcting possible errors</dd>
+                        <dt><b>Skanörs båtklubb</b> / head sailing instructor</dt>
+                        <dd>My responsibilities include managing a team of sailing instructors as well<br>as teaching sailing to kids and adults</dd>
+                    </dl>
+                </section>
+            </div>
+            <div class="edu">
+                <input type="checkbox" id="edu">
+                <label for="edu">Education</label>
+                <section class="edu-content sub-content">
+                </section>
+            </div>
+            <div class="contact">
+                <input type="checkbox" id="contact">
+                <label for="contact">Contact</label>
+                <section class="contact-content sub-content">
+                    <ul>
+                        <li><b>Email</b> - elliot@steffensens.io</li>
+                        <li><b>Phone</b> - +46 070-715 20 85</li>
+                        <li><a href="https://github.com/Bellsan"><b>Github</b> - ElliotS</a></li>
+                        <li><a href="https://www.linkedin.com/in/elliot-steffensen-05694a227/"><b>LinkedIn</b> - Elliot Steffensen</a></li>
+                    </ul>
+                </section>
+            </div>
         </div>
-        <div id="input-container">
-            <form action="" id="form1">
-                <p class="login">[guest@bellsan.dev ~]# <input type="text" id="input" autocomplete="off"></p>
-                
-            </form>
-        </div>
-
     </div>
 </body>
 

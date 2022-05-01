@@ -1,42 +1,220 @@
-#container {
-  padding:0;
-  margin:0;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top:0;
-  left:0;
-  font-family: 'Courier New', Courier, monospace;
-  background-color: black;
-  color: white;
-  display: grid;
-  grid-template-columns: repeat(10, 10%);
-  grid-template-rows: repeat(10, 10%);
-
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
-#input {
-  border-left-style: none;
-  border-right-style: none;
-  border-bottom-style: none;
-  border-top-style: none;
-  background-color: black;
-  color: white;
-  
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
 }
 
-#input-container {
-  grid-column: 4 / 6;
-  grid-row: 6;
-  align-self: start;
+body {
+	line-height: 1;
 }
 
-#output-container {
-  grid-column: 4 / 8;
-  grid-row: 5;
-  align-self: end;
+ol,
+ul {
+	list-style: none;
 }
 
-p.output {
-  padding-left: 1vh;
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;700&display=swap");
+
+:root {
+	--main-bg-color: #171717;
+	--main-fg-color: #424242;
+	--main-txt-color: #EDEDED;
+}
+
+body {
+	font-family: "Roboto Mono", monospace;
+	background-color: var(--main-bg-color);
+}
+
+b {
+	font-weight: 700;
+}
+
+.container {
+	padding-top: 5rem;
+	width: min(100% - 2rem, 60rem);
+	margin-inline: auto;
+	color: var(--main-txt-color);
+	line-height: 2rem;
+}
+
+h1 {
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 3rem;
+}
+
+h2 {
+	font-size: 24px;
+	color: #707070;
+}
+
+a {
+	text-decoration: none;
+	color: #EDEDED;
+}
+
+input {
+	display: none;
+}
+
+label {
+	cursor: pointer;
+	font-size: 18px;
+}
+
+label::before {
+	content: "[+] ";
+}
+
+input:checked + label::before {
+	content: "[-] ";
+}
+
+ul li::before {
+	content: "\2022";
+	color: #DA0037;
+	display: inline-block;
+	width: 1em;
+	font-weight: 700;
+}
+
+.sub-content {
+	display: none;
+	padding-left: 2rem;
+}
+
+input:checked ~ .sub-content {
+	display: block;
+}
+
+
+dt::before {
+	content: "\2022";
+	color: #DA0037;
+	display: inline-block;
+	width: 1em;
+	font-weight: 700;
+}
+
+dd {
+	line-height: 1.3rem;
+	padding-left: 2em;
+	font-size: 14px;
 }
