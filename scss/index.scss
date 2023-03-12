@@ -1,0 +1,123 @@
+@import 'base.scss';
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;700&display=swap");
+
+:root {
+	--main-bg-color: #171717;
+	--main-fg-color: #424242;
+	--main-txt-color: #EDEDED;
+}
+
+body {
+	font-family: "Roboto Mono", monospace;
+	background-color: var(--main-bg-color);
+}
+
+b {
+	font-weight: 700;
+}
+
+.container {
+	padding-top: 5rem;
+	width: min(100% - 2rem, 60rem);
+	margin-inline: auto;
+	color: var(--main-txt-color);
+	line-height: 2rem;
+}
+
+h1 {
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 3rem;
+}
+
+h2 {
+	font-size: 24px;
+	color: #707070;
+}
+
+a {
+	text-decoration: none;
+	color: #EDEDED;
+}
+
+input {
+	display: none;
+}
+
+label {
+	cursor: pointer;
+	font-size: 18px;
+}
+
+label::before {
+	content: "[+] ";
+}
+
+input:checked + label::before {
+	content: "[-] ";
+}
+
+ul li::before {
+	content: "\2022";
+	color: #DA0037;
+	display: inline-block;
+	width: 1em;
+	font-weight: 700;
+}
+
+.sub-content {
+	display: none;
+	padding-left: 2rem;
+}
+
+input:checked ~ .sub-content {
+	display: block;
+}
+
+
+dt::before {
+	content: "\2022";
+	color: #DA0037;
+	display: inline-block;
+	width: 1em;
+	font-weight: 700;
+}
+
+dd {
+	line-height: 1.3rem;
+	padding-left: 2em;
+	font-size: 14px;
+}
+
+.contact-content {
+    span {
+        position: relative;
+        text-decoration: none;
+        transition: all .35s ease;
+    
+        &::before {
+            content: ""; 
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #EDEDED;
+            visibility: hidden;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transition: all 0.3s ease-in-out 0s; 
+            transition: all 0.3s ease-in-out 0s; 
+        }   
+    
+        &:hover {
+    
+            &::before {
+                visibility: visible;
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+            }   
+        }  
+    }
+}
