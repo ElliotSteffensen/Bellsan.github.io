@@ -58,7 +58,7 @@ input:checked + label::before {
 	content: "[-] ";
 }
 
-ul li::before {
+li::before {
 	content: "\2022";
 	color: #DA0037;
 	display: inline-block;

@@ -187,7 +187,7 @@ input:checked + label::before {
   content: "[-] ";
 }
 
-ul li::before {
+li::before {
   content: "•";
   color: #DA0037;
   display: inline-block;
@@ -232,15 +232,10 @@ dd {
   left: 0;
   background-color: #EDEDED;
   visibility: hidden;
-  -webkit-transform: scaleX(0);
   transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 .contact-content span:hover::before {
   visibility: visible;
-  -webkit-transform: scaleX(1);
   transform: scaleX(1);
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
